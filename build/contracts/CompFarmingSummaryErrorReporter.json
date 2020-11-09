@@ -1,0 +1,1882 @@
+{
+  "contractName": "CompFarmingSummaryErrorReporter",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "error",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "info",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "detail",
+          "type": "uint256"
+        }
+      ],
+      "name": "Failure",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"error\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"info\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"detail\",\"type\":\"uint256\"}],\"name\":\"Failure\",\"type\":\"event\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/main/Documents/macDocumentBackup062020/coding/playground/EthDev/compoundFinance/myCompFarmingPrediction/contracts/utility/ErrorReporter.sol\":\"CompFarmingSummaryErrorReporter\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/main/Documents/macDocumentBackup062020/coding/playground/EthDev/compoundFinance/myCompFarmingPrediction/contracts/utility/ErrorReporter.sol\":{\"keccak256\":\"0xf1cb180e7ddc407319432727ac11d66752fd1bdbb22e553eec64744b4db54578\",\"urls\":[\"bzz-raw://7e7c5c901c61d5fe1621bf82438ae26c93be38fe6a21e41151b4ec11d9e9c205\",\"dweb:/ipfs/Qma1pf2jECnBiaZ3BFiLJxLrqcjCVMp4cRJ7bvV8hHpfUN\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582099cea61c50e5a8fdc7e92508e259c2757edabc5039730359f4a0e54a3381d22e64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582099cea61c50e5a8fdc7e92508e259c2757edabc5039730359f4a0e54a3381d22e64736f6c63430005100032",
+  "sourceMap": "27:814:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:814:8;;;;;;;",
+  "deployedSourceMap": "27:814:8:-;;;;;",
+  "source": "pragma solidity ^0.5.16;\n\n\ncontract CompFarmingSummaryErrorReporter {\n    enum Error {\n        NO_ERROR,\n        CTOKEN_NOT_FOUND,\n        CETH_NOT_SUPPORTED,\n        ACCOUNT_SNAPSHOT_ERROR,\n        UNAUTHORIZED\n    }\n\n    enum FailureInfo {\n        SET_PENDING_IMPLEMENTATION_OWNER_CHECK,\n        ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK,\n        SET_PENDING_ADMIN_OWNER_CHECK,\n        ACCEPT_ADMIN_PENDING_ADMIN_CHECK\n    }\n\n\n     event Failure(uint error, uint info, uint detail);\n\n     function fail(Error err, FailureInfo info) internal returns (uint) {\n         emit Failure(uint(err), uint(info), 0);\n\n         return uint(err);\n     }\n\n     function failOpaque(Error err, FailureInfo info, uint opaqueError) internal returns (uint) {\n         emit Failure(uint(err), uint(info), opaqueError);\n\n         return uint(err);\n     }\n\n}\n",
+  "sourcePath": "/Users/main/Documents/macDocumentBackup062020/coding/playground/EthDev/compoundFinance/myCompFarmingPrediction/contracts/utility/ErrorReporter.sol",
+  "ast": {
+    "absolutePath": "/Users/main/Documents/macDocumentBackup062020/coding/playground/EthDev/compoundFinance/myCompFarmingPrediction/contracts/utility/ErrorReporter.sol",
+    "exportedSymbols": {
+      "CompFarmingSummaryErrorReporter": [
+        3592
+      ]
+    },
+    "id": 3593,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3522,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3592,
+        "linearizedBaseContracts": [
+          3592
+        ],
+        "name": "CompFarmingSummaryErrorReporter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CompFarmingSummaryErrorReporter.Error",
+            "id": 3528,
+            "members": [
+              {
+                "id": 3523,
+                "name": "NO_ERROR",
+                "nodeType": "EnumValue",
+                "src": "95:8:8"
+              },
+              {
+                "id": 3524,
+                "name": "CTOKEN_NOT_FOUND",
+                "nodeType": "EnumValue",
+                "src": "113:16:8"
+              },
+              {
+                "id": 3525,
+                "name": "CETH_NOT_SUPPORTED",
+                "nodeType": "EnumValue",
+                "src": "139:18:8"
+              },
+              {
+                "id": 3526,
+                "name": "ACCOUNT_SNAPSHOT_ERROR",
+                "nodeType": "EnumValue",
+                "src": "167:22:8"
+              },
+              {
+                "id": 3527,
+                "name": "UNAUTHORIZED",
+                "nodeType": "EnumValue",
+                "src": "199:12:8"
+              }
+            ],
+            "name": "Error",
+            "nodeType": "EnumDefinition",
+            "src": "74:143:8"
+          },
+          {
+            "canonicalName": "CompFarmingSummaryErrorReporter.FailureInfo",
+            "id": 3533,
+            "members": [
+              {
+                "id": 3529,
+                "name": "SET_PENDING_IMPLEMENTATION_OWNER_CHECK",
+                "nodeType": "EnumValue",
+                "src": "250:38:8"
+              },
+              {
+                "id": 3530,
+                "name": "ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK",
+                "nodeType": "EnumValue",
+                "src": "298:43:8"
+              },
+              {
+                "id": 3531,
+                "name": "SET_PENDING_ADMIN_OWNER_CHECK",
+                "nodeType": "EnumValue",
+                "src": "351:29:8"
+              },
+              {
+                "id": 3532,
+                "name": "ACCEPT_ADMIN_PENDING_ADMIN_CHECK",
+                "nodeType": "EnumValue",
+                "src": "390:32:8"
+              }
+            ],
+            "name": "FailureInfo",
+            "nodeType": "EnumDefinition",
+            "src": "223:205:8"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 3541,
+            "name": "Failure",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3535,
+                  "indexed": false,
+                  "name": "error",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3541,
+                  "src": "450:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3534,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "450:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3537,
+                  "indexed": false,
+                  "name": "info",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3541,
+                  "src": "462:9:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3536,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3539,
+                  "indexed": false,
+                  "name": "detail",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3541,
+                  "src": "473:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3538,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "449:36:8"
+            },
+            "src": "436:50:8"
+          },
+          {
+            "body": {
+              "id": 3564,
+              "nodeType": "Block",
+              "src": "560:85:8",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3552,
+                            "name": "err",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3543,
+                            "src": "589:3:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          ],
+                          "id": 3551,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "584:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3553,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "584:9:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3555,
+                            "name": "info",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3545,
+                            "src": "600:4:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          ],
+                          "id": 3554,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "595:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3556,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "595:10:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 3557,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "607:1:8",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 3550,
+                      "name": "Failure",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3541,
+                      "src": "576:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256)"
+                      }
+                    },
+                    "id": 3558,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "576:33:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3559,
+                  "nodeType": "EmitStatement",
+                  "src": "571:38:8"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3561,
+                        "name": "err",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3543,
+                        "src": "633:3:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      ],
+                      "id": 3560,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "628:4:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 3562,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "628:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3549,
+                  "id": 3563,
+                  "nodeType": "Return",
+                  "src": "621:16:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3565,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fail",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3546,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3543,
+                  "name": "err",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3565,
+                  "src": "507:9:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Error_$3528",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3542,
+                    "name": "Error",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3528,
+                    "src": "507:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Error_$3528",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3545,
+                  "name": "info",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3565,
+                  "src": "518:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3544,
+                    "name": "FailureInfo",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3533,
+                    "src": "518:11:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "506:29:8"
+            },
+            "returnParameters": {
+              "id": 3549,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3548,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3565,
+                  "src": "554:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3547,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "554:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "553:6:8"
+            },
+            "scope": 3592,
+            "src": "493:152:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3590,
+              "nodeType": "Block",
+              "src": "743:95:8",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3578,
+                            "name": "err",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3567,
+                            "src": "772:3:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          ],
+                          "id": 3577,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "767:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3579,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "767:9:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3581,
+                            "name": "info",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3569,
+                            "src": "783:4:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          ],
+                          "id": 3580,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "778:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3582,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "778:10:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 3583,
+                        "name": "opaqueError",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3571,
+                        "src": "790:11:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 3576,
+                      "name": "Failure",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3541,
+                      "src": "759:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256)"
+                      }
+                    },
+                    "id": 3584,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "759:43:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3585,
+                  "nodeType": "EmitStatement",
+                  "src": "754:48:8"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3587,
+                        "name": "err",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3567,
+                        "src": "826:3:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      ],
+                      "id": 3586,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "821:4:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 3588,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "821:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3575,
+                  "id": 3589,
+                  "nodeType": "Return",
+                  "src": "814:16:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3591,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "failOpaque",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3567,
+                  "name": "err",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "672:9:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Error_$3528",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3566,
+                    "name": "Error",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3528,
+                    "src": "672:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Error_$3528",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3569,
+                  "name": "info",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "683:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3568,
+                    "name": "FailureInfo",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3533,
+                    "src": "683:11:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3571,
+                  "name": "opaqueError",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "701:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3570,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "701:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "671:47:8"
+            },
+            "returnParameters": {
+              "id": 3575,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3574,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "737:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3573,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "736:6:8"
+            },
+            "scope": 3592,
+            "src": "652:186:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 3593,
+        "src": "27:814:8"
+      }
+    ],
+    "src": "0:842:8"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/main/Documents/macDocumentBackup062020/coding/playground/EthDev/compoundFinance/myCompFarmingPrediction/contracts/utility/ErrorReporter.sol",
+    "exportedSymbols": {
+      "CompFarmingSummaryErrorReporter": [
+        3592
+      ]
+    },
+    "id": 3593,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3522,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 3592,
+        "linearizedBaseContracts": [
+          3592
+        ],
+        "name": "CompFarmingSummaryErrorReporter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "CompFarmingSummaryErrorReporter.Error",
+            "id": 3528,
+            "members": [
+              {
+                "id": 3523,
+                "name": "NO_ERROR",
+                "nodeType": "EnumValue",
+                "src": "95:8:8"
+              },
+              {
+                "id": 3524,
+                "name": "CTOKEN_NOT_FOUND",
+                "nodeType": "EnumValue",
+                "src": "113:16:8"
+              },
+              {
+                "id": 3525,
+                "name": "CETH_NOT_SUPPORTED",
+                "nodeType": "EnumValue",
+                "src": "139:18:8"
+              },
+              {
+                "id": 3526,
+                "name": "ACCOUNT_SNAPSHOT_ERROR",
+                "nodeType": "EnumValue",
+                "src": "167:22:8"
+              },
+              {
+                "id": 3527,
+                "name": "UNAUTHORIZED",
+                "nodeType": "EnumValue",
+                "src": "199:12:8"
+              }
+            ],
+            "name": "Error",
+            "nodeType": "EnumDefinition",
+            "src": "74:143:8"
+          },
+          {
+            "canonicalName": "CompFarmingSummaryErrorReporter.FailureInfo",
+            "id": 3533,
+            "members": [
+              {
+                "id": 3529,
+                "name": "SET_PENDING_IMPLEMENTATION_OWNER_CHECK",
+                "nodeType": "EnumValue",
+                "src": "250:38:8"
+              },
+              {
+                "id": 3530,
+                "name": "ACCEPT_PENDING_IMPLEMENTATION_ADDRESS_CHECK",
+                "nodeType": "EnumValue",
+                "src": "298:43:8"
+              },
+              {
+                "id": 3531,
+                "name": "SET_PENDING_ADMIN_OWNER_CHECK",
+                "nodeType": "EnumValue",
+                "src": "351:29:8"
+              },
+              {
+                "id": 3532,
+                "name": "ACCEPT_ADMIN_PENDING_ADMIN_CHECK",
+                "nodeType": "EnumValue",
+                "src": "390:32:8"
+              }
+            ],
+            "name": "FailureInfo",
+            "nodeType": "EnumDefinition",
+            "src": "223:205:8"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 3541,
+            "name": "Failure",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 3540,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3535,
+                  "indexed": false,
+                  "name": "error",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3541,
+                  "src": "450:10:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3534,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "450:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3537,
+                  "indexed": false,
+                  "name": "info",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3541,
+                  "src": "462:9:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3536,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3539,
+                  "indexed": false,
+                  "name": "detail",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3541,
+                  "src": "473:11:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3538,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "449:36:8"
+            },
+            "src": "436:50:8"
+          },
+          {
+            "body": {
+              "id": 3564,
+              "nodeType": "Block",
+              "src": "560:85:8",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3552,
+                            "name": "err",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3543,
+                            "src": "589:3:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          ],
+                          "id": 3551,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "584:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3553,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "584:9:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3555,
+                            "name": "info",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3545,
+                            "src": "600:4:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          ],
+                          "id": 3554,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "595:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3556,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "595:10:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 3557,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "607:1:8",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        }
+                      ],
+                      "id": 3550,
+                      "name": "Failure",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3541,
+                      "src": "576:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256)"
+                      }
+                    },
+                    "id": 3558,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "576:33:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3559,
+                  "nodeType": "EmitStatement",
+                  "src": "571:38:8"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3561,
+                        "name": "err",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3543,
+                        "src": "633:3:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      ],
+                      "id": 3560,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "628:4:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 3562,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "628:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3549,
+                  "id": 3563,
+                  "nodeType": "Return",
+                  "src": "621:16:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3565,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "fail",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3546,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3543,
+                  "name": "err",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3565,
+                  "src": "507:9:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Error_$3528",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3542,
+                    "name": "Error",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3528,
+                    "src": "507:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Error_$3528",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3545,
+                  "name": "info",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3565,
+                  "src": "518:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3544,
+                    "name": "FailureInfo",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3533,
+                    "src": "518:11:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "506:29:8"
+            },
+            "returnParameters": {
+              "id": 3549,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3548,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3565,
+                  "src": "554:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3547,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "554:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "553:6:8"
+            },
+            "scope": 3592,
+            "src": "493:152:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 3590,
+              "nodeType": "Block",
+              "src": "743:95:8",
+              "statements": [
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3578,
+                            "name": "err",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3567,
+                            "src": "772:3:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_Error_$3528",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                            }
+                          ],
+                          "id": 3577,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "767:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3579,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "767:9:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 3581,
+                            "name": "info",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3569,
+                            "src": "783:4:8",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                              "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                            }
+                          ],
+                          "id": 3580,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "778:4:8",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 3582,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "778:10:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 3583,
+                        "name": "opaqueError",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3571,
+                        "src": "790:11:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 3576,
+                      "name": "Failure",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3541,
+                      "src": "759:7:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256,uint256)"
+                      }
+                    },
+                    "id": 3584,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "759:43:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 3585,
+                  "nodeType": "EmitStatement",
+                  "src": "754:48:8"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 3587,
+                        "name": "err",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 3567,
+                        "src": "826:3:8",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_enum$_Error_$3528",
+                          "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                        }
+                      ],
+                      "id": 3586,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "821:4:8",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_uint256_$",
+                        "typeString": "type(uint256)"
+                      },
+                      "typeName": "uint"
+                    },
+                    "id": 3588,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "821:9:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 3575,
+                  "id": 3589,
+                  "nodeType": "Return",
+                  "src": "814:16:8"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 3591,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "failOpaque",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3567,
+                  "name": "err",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "672:9:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Error_$3528",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3566,
+                    "name": "Error",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3528,
+                    "src": "672:5:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Error_$3528",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.Error"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3569,
+                  "name": "info",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "683:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                    "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3568,
+                    "name": "FailureInfo",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3533,
+                    "src": "683:11:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_FailureInfo_$3533",
+                      "typeString": "enum CompFarmingSummaryErrorReporter.FailureInfo"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3571,
+                  "name": "opaqueError",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "701:16:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3570,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "701:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "671:47:8"
+            },
+            "returnParameters": {
+              "id": 3575,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3574,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3591,
+                  "src": "737:4:8",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3573,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "737:4:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "736:6:8"
+            },
+            "scope": 3592,
+            "src": "652:186:8",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 3593,
+        "src": "27:814:8"
+      }
+    ],
+    "src": "0:842:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-10-29T06:18:50.416Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

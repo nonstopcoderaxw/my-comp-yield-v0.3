@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestCompFarmingSummary.js</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../doc-style.css" />
+  <script src="../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../";
+    var thisFile = "execjs/TestCompFarmingSummary.js";
+    var defaultSidebar = true;
+  </script>
+  <script src="../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>TestCompFarmingSummary.js</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript"><span class="hljs-keyword">const</span> network = <span class="hljs-string">"private_mainnet"</span>;
+
+
+<span class="hljs-keyword">const</span> CompFarmingSummary = artifacts.require(<span class="hljs-string">"./CompFarmingSummary.sol"</span>);
+<span class="hljs-keyword">const</span> evn = <span class="hljs-built_in">require</span>(<span class="hljs-string">"../evn.json"</span>);
+
+<span class="hljs-keyword">var</span> CompFarmingSummaryContract;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">callback</span>) </span>{
+    main();
+
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">await</span> renderContracts();
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-2" id="section-2"></a>
+</div>
+<p>getCash();
+getTotalBorrow();
+getPrice();
+RetrieveCTokenTotalSupply();</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript">    retrieveCTokenTotalBorrow();
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderContracts</span>(<span class="hljs-params"></span>)</span>{
+    CompFarmingSummaryContract = <span class="hljs-keyword">await</span> CompFarmingSummary.deployed();
+}
+
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCash</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">var</span> cash = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getCash(cDaiAddress);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"cash: "</span>, cash.toString());
+
+    }<span class="hljs-keyword">catch</span>(e){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"e: "</span>, e);
+    }
+
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getTotalBorrow</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">var</span> totalBorrow = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getTotalBorrow(cDaiAddress);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"TotalBorrow: "</span>, totalBorrow.toString());
+
+    }<span class="hljs-keyword">catch</span>(e){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"e: "</span>, e);
+    }
+
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPrice</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">var</span> price = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getPriceInUSD(evn.tokenAddresses.USDT, evn.tokenAddresses.cUSDT);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"price: "</span>, price.toString());
+        <span class="hljs-keyword">var</span> loggins = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getLoggings();
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"loggins: "</span>, loggins.toString());
+
+    }<span class="hljs-keyword">catch</span>(e){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"e: "</span>, e);
+    }
+
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getETHPriceInUSD</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">try</span>{
+        <span class="hljs-keyword">var</span> ethPrice = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getETHPriceInUSD();
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"ethPrice: "</span>, ethPrice.toString());
+        <span class="hljs-keyword">var</span> loggins = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getLoggings();
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"loggins: "</span>, loggins.toString());
+
+    }<span class="hljs-keyword">catch</span>(e){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"e: "</span>, e);
+    }
+
+}
+
+
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">RetrieveCTokenTotalSupply</span>(<span class="hljs-params"></span>) </span>{
+
+    <span class="hljs-keyword">try</span>{
+
+        <span class="hljs-keyword">var</span> daiTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cDai"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"daiTotalSupplyMantissa: "</span>, daiTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> ethTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cEth"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"ethTotalSupplyMantissa: "</span>, ethTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> usdtTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cUSDT"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"usdtTotalSupplyMantissa: "</span>, usdtTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> zrxTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cZRX"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"zrxTotalSupplyMantissa: "</span>, zrxTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> wbtcTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cWBTC"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"wbtcTotalSupplyMantissa: "</span>, wbtcTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> repTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cREP"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"repTotalSupplyMantissa: "</span>, repTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> batTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cBAT"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"batTotalSupplyMantissa: "</span>, batTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+        <span class="hljs-keyword">var</span> usdcTotalSupplyMantissa = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalSupply(<span class="hljs-string">"cUSDC"</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"usdcTotalSupplyMantissa: "</span>, usdcTotalSupplyMantissa.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+
+    }<span class="hljs-keyword">catch</span>(e){
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"e: "</span>, e);
+    }
+
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">retrieveCTokenTotalBorrow</span>(<span class="hljs-params"></span>)</span>{
+      <span class="hljs-keyword">var</span> dai = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.retrieveCTokenTotalBorrow(<span class="hljs-string">"cDai"</span>);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"dai: "</span>, dai.toString() / <span class="hljs-number">10</span>**<span class="hljs-number">18</span>);
+      log();
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-3" id="section-3"></a>
+</div>
+<div class="dox">
+<div class="summary">
+<p>Next Step uncomment these and run script
+var eth = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cEth&quot;);
+console.log(&quot;eth: &quot;, eth.toString() / 10**18);</p>
+</div>
+<div class="body">
+<p>var usdt = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cUSDT&quot;);
+console.log(&quot;usdt: &quot;, usdt.toString() / 10**18);</p>
+<p>var zrx = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cZRX&quot;);
+console.log(&quot;zrx: &quot;, zrx.toString() / 10**18);</p>
+<p>var wbtc = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cWBTC&quot;);
+console.log(&quot;wbtc: &quot;, wbtc.toString() / 10**18);</p>
+<p>var rep = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cREP&quot;);
+console.log(&quot;rep: &quot;, rep.toString() / 10**18);</p>
+<p>var bat = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cBAT&quot;);
+console.log(&quot;bat: &quot;, bat.toString() / 10**18);</p>
+<p>var usdc = await CompFarmingSummaryContract.retrieveCTokenTotalBorrow(&quot;cUSDC&quot;);
+console.log(&quot;usdc: &quot;, usdc.toString() / 10**18);</p>
+</div>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="javascript">}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">log</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> logs = <span class="hljs-keyword">await</span> CompFarmingSummaryContract.getLoggings();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"logs: "</span>, logs.toString());
+}
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

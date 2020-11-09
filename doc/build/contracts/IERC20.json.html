@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IERC20.json</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../";
+    var thisFile = "build/contracts/IERC20.json";
+    var defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>IERC20.json</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="json">{
+  <span class="hljs-attr">"contractName"</span>: <span class="hljs-string">"IERC20"</span>,
+  <span class="hljs-attr">"abi"</span>: [
+    {
+      <span class="hljs-attr">"anonymous"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"owner"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"value"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Approval"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"event"</span>
+    },
+    {
+      <span class="hljs-attr">"anonymous"</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"from"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"to"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">false</span>,
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"value"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Transfer"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"event"</span>
+    },
+    {
+      <span class="hljs-attr">"inputs"</span>: [],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"totalSupply"</span>,
+      <span class="hljs-attr">"outputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"function"</span>
+    },
+    {
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"account"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"balanceOf"</span>,
+      <span class="hljs-attr">"outputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"function"</span>
+    },
+    {
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"recipient"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"transfer"</span>,
+      <span class="hljs-attr">"outputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"bool"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"bool"</span>
+        }
+      ],
+      <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"function"</span>
+    },
+    {
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"owner"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"allowance"</span>,
+      <span class="hljs-attr">"outputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"function"</span>
+    },
+    {
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"approve"</span>,
+      <span class="hljs-attr">"outputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"bool"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"bool"</span>
+        }
+      ],
+      <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"function"</span>
+    },
+    {
+      <span class="hljs-attr">"inputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"sender"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"address"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"recipient"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"address"</span>
+        },
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"uint256"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"uint256"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"transferFrom"</span>,
+      <span class="hljs-attr">"outputs"</span>: [
+        {
+          <span class="hljs-attr">"internalType"</span>: <span class="hljs-string">"bool"</span>,
+          <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+          <span class="hljs-attr">"type"</span>: <span class="hljs-string">"bool"</span>
+        }
+      ],
+      <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"function"</span>
+    }
+  ],
+  <span class="hljs-attr">"metadata"</span>: <span class="hljs-string">"{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of the ERC20 standard as defined in the EIP.\",\"events\":{\"Approval(address,address,uint256)\":{\"details\":\"Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance.\"},\"Transfer(address,address,uint256)\":{\"details\":\"Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero.\"}},\"kind\":\"dev\",\"methods\":{\"allowance(address,address)\":{\"details\":\"Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called.\"},\"approve(address,uint256)\":{\"details\":\"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.\"},\"balanceOf(address)\":{\"details\":\"Returns the amount of tokens owned by `account`.\"},\"totalSupply()\":{\"details\":\"Returns the amount of tokens in existence.\"},\"transfer(address,uint256)\":{\"details\":\"Moves `amount` tokens from the caller's account to `recipient`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"},\"transferFrom(address,address,uint256)\":{\"details\":\"Moves `amount` tokens from `sender` to `recipient` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":\"IERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]}},\"version\":1}"</span>,
+  <span class="hljs-attr">"bytecode"</span>: <span class="hljs-string">"0x"</span>,
+  <span class="hljs-attr">"deployedBytecode"</span>: <span class="hljs-string">"0x"</span>,
+  <span class="hljs-attr">"immutableReferences"</span>: {},
+  <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"deployedSourceMap"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"source"</span>: <span class="hljs-string">"// SPDX-License-Identifier: MIT\n\npragma solidity ^0.6.0;\n\n/**\n * @dev Interface of the ERC20 standard as defined in the EIP.\n */\ninterface IERC20 {\n    /**\n     * @dev Returns the amount of tokens in existence.\n     */\n    function totalSupply() external view returns (uint256);\n\n    /**\n     * @dev Returns the amount of tokens owned by `account`.\n     */\n    function balanceOf(address account) external view returns (uint256);\n\n    /**\n     * @dev Moves `amount` tokens from the caller's account to `recipient`.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transfer(address recipient, uint256 amount) external returns (bool);\n\n    /**\n     * @dev Returns the remaining number of tokens that `spender` will be\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\n     * zero by default.\n     *\n     * This value changes when {approve} or {transferFrom} are called.\n     */\n    function allowance(address owner, address spender) external view returns (uint256);\n\n    /**\n     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\n     * that someone may use both the old and the new allowance by unfortunate\n     * transaction ordering. One possible solution to mitigate this race\n     * condition is to first reduce the spender's allowance to 0 and set the\n     * desired value afterwards:\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n     *\n     * Emits an {Approval} event.\n     */\n    function approve(address spender, uint256 amount) external returns (bool);\n\n    /**\n     * @dev Moves `amount` tokens from `sender` to `recipient` using the\n     * allowance mechanism. `amount` is then deducted from the caller's\n     * allowance.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);\n\n    /**\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\n     * another (`to`).\n     *\n     * Note that `value` may be zero.\n     */\n    event Transfer(address indexed from, address indexed to, uint256 value);\n\n    /**\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\n     * a call to {approve}. `value` is the new allowance.\n     */\n    event Approval(address indexed owner, address indexed spender, uint256 value);\n}\n"</span>,
+  <span class="hljs-attr">"sourcePath"</span>: <span class="hljs-string">"@openzeppelin/contracts/token/ERC20/IERC20.sol"</span>,
+  <span class="hljs-attr">"ast"</span>: {
+    <span class="hljs-attr">"absolutePath"</span>: <span class="hljs-string">"@openzeppelin/contracts/token/ERC20/IERC20.sol"</span>,
+    <span class="hljs-attr">"exportedSymbols"</span>: {
+      <span class="hljs-attr">"IERC20"</span>: [
+        <span class="hljs-number">2657</span>
+      ]
+    },
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2658</span>,
+    <span class="hljs-attr">"license"</span>: <span class="hljs-string">"MIT"</span>,
+    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"SourceUnit"</span>,
+    <span class="hljs-attr">"nodes"</span>: [
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">2581</span>,
+        <span class="hljs-attr">"literals"</span>: [
+          <span class="hljs-string">"solidity"</span>,
+          <span class="hljs-string">"^"</span>,
+          <span class="hljs-string">"0.6"</span>,
+          <span class="hljs-string">".0"</span>
+        ],
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"PragmaDirective"</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:23:9"</span>
+      },
+      {
+        <span class="hljs-attr">"abstract"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"baseContracts"</span>: [],
+        <span class="hljs-attr">"contractDependencies"</span>: [],
+        <span class="hljs-attr">"contractKind"</span>: <span class="hljs-string">"interface"</span>,
+        <span class="hljs-attr">"documentation"</span>: {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-number">2582</span>,
+          <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"58:70:9"</span>,
+          <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Interface of the ERC20 standard as defined in the EIP."</span>
+        },
+        <span class="hljs-attr">"fullyImplemented"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">2657</span>,
+        <span class="hljs-attr">"linearizedBaseContracts"</span>: [
+          <span class="hljs-number">2657</span>
+        ],
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"IERC20"</span>,
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ContractDefinition"</span>,
+        <span class="hljs-attr">"nodes"</span>: [
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2583</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"152:66:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Returns the amount of tokens in existence."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"18160ddd"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2588</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"totalSupply"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2584</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"243:2:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2587</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2586</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2588</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"269:7:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2585</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"269:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"268:9:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"223:55:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2589</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"284:72:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Returns the amount of tokens owned by `account`."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"70a08231"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2596</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"balanceOf"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2592</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2591</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"account"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2596</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"380:15:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2590</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"380:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"379:17:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2595</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2594</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2596</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"420:7:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2593</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"420:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"419:9:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"361:68:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2597</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"435:209:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Moves `amount` tokens from the caller's account to `recipient`.\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"a9059cbb"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2606</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"transfer"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2602</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2599</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"recipient"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2606</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"667:17:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2598</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"667:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2601</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2606</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"686:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2600</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"686:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"666:35:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2605</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2604</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2606</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"720:4:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2603</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bool"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"720:4:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"719:6:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"649:77:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2607</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"732:264:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Returns the remaining number of tokens that `spender` will be\n allowed to spend on behalf of `owner` through {transferFrom}. This is\n zero by default.\n This value changes when {approve} or {transferFrom} are called."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"dd62ed3e"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2616</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"allowance"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2612</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2609</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"owner"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2616</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1020:13:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2608</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1020:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2611</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2616</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1035:15:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2610</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1035:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1019:32:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2615</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2614</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2616</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1075:7:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2613</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1075:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1074:9:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1001:83:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2617</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1090:642:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\n Returns a boolean value indicating whether the operation succeeded.\n IMPORTANT: Beware that changing an allowance with this method brings the risk\n that someone may use both the old and the new allowance by unfortunate\n transaction ordering. One possible solution to mitigate this race\n condition is to first reduce the spender's allowance to 0 and set the\n desired value afterwards:\n https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n Emits an {Approval} event."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"095ea7b3"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2626</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"approve"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2622</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2619</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2626</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1754:15:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2618</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1754:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2621</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2626</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1771:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2620</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1771:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1753:33:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2625</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2624</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2626</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1805:4:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2623</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bool"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1805:4:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1804:6:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1737:74:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2627</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1817:296:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Moves `amount` tokens from `sender` to `recipient` using the\n allowance mechanism. `amount` is then deducted from the caller's\n allowance.\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"23b872dd"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2638</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"transferFrom"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2634</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2629</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"sender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2140:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2628</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2140:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2631</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"recipient"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2156:17:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2630</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2156:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2633</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2175:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2632</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2175:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2139:51:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2637</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2636</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2209:4:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2635</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bool"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2209:4:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2208:6:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2118:97:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"anonymous"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2639</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2221:158:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Emitted when `value` tokens are moved from one account (`from`) to\n another (`to`).\n Note that `value` may be zero."</span>
+            },
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2647</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Transfer"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"EventDefinition"</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2646</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2641</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"from"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2647</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2399:20:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2640</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2399:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2643</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"to"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2647</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2421:18:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2642</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2421:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2645</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"value"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2647</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2441:13:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2644</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2441:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2398:57:9"</span>
+            },
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2384:72:9"</span>
+          },
+          {
+            <span class="hljs-attr">"anonymous"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2648</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2462:148:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Emitted when the allowance of a `spender` for an `owner` is set by\n a call to {approve}. `value` is the new allowance."</span>
+            },
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2656</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Approval"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"EventDefinition"</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2655</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2650</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"owner"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2656</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2630:21:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2649</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2630:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2652</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2656</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2653:23:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2651</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2653:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2654</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"value"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2656</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2678:13:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2653</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2678:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2629:63:9"</span>
+            },
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2615:78:9"</span>
+          }
+        ],
+        <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2658</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"129:2566:9"</span>
+      }
+    ],
+    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:2663:9"</span>
+  },
+  <span class="hljs-attr">"legacyAST"</span>: {
+    <span class="hljs-attr">"absolutePath"</span>: <span class="hljs-string">"@openzeppelin/contracts/token/ERC20/IERC20.sol"</span>,
+    <span class="hljs-attr">"exportedSymbols"</span>: {
+      <span class="hljs-attr">"IERC20"</span>: [
+        <span class="hljs-number">2657</span>
+      ]
+    },
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2658</span>,
+    <span class="hljs-attr">"license"</span>: <span class="hljs-string">"MIT"</span>,
+    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"SourceUnit"</span>,
+    <span class="hljs-attr">"nodes"</span>: [
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">2581</span>,
+        <span class="hljs-attr">"literals"</span>: [
+          <span class="hljs-string">"solidity"</span>,
+          <span class="hljs-string">"^"</span>,
+          <span class="hljs-string">"0.6"</span>,
+          <span class="hljs-string">".0"</span>
+        ],
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"PragmaDirective"</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:23:9"</span>
+      },
+      {
+        <span class="hljs-attr">"abstract"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"baseContracts"</span>: [],
+        <span class="hljs-attr">"contractDependencies"</span>: [],
+        <span class="hljs-attr">"contractKind"</span>: <span class="hljs-string">"interface"</span>,
+        <span class="hljs-attr">"documentation"</span>: {
+          <span class="hljs-attr">"id"</span>: <span class="hljs-number">2582</span>,
+          <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+          <span class="hljs-attr">"src"</span>: <span class="hljs-string">"58:70:9"</span>,
+          <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Interface of the ERC20 standard as defined in the EIP."</span>
+        },
+        <span class="hljs-attr">"fullyImplemented"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">2657</span>,
+        <span class="hljs-attr">"linearizedBaseContracts"</span>: [
+          <span class="hljs-number">2657</span>
+        ],
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"IERC20"</span>,
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ContractDefinition"</span>,
+        <span class="hljs-attr">"nodes"</span>: [
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2583</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"152:66:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Returns the amount of tokens in existence."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"18160ddd"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2588</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"totalSupply"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2584</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"243:2:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2587</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2586</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2588</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"269:7:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2585</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"269:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"268:9:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"223:55:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2589</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"284:72:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Returns the amount of tokens owned by `account`."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"70a08231"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2596</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"balanceOf"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2592</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2591</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"account"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2596</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"380:15:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2590</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"380:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"379:17:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2595</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2594</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2596</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"420:7:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2593</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"420:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"419:9:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"361:68:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2597</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"435:209:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Moves `amount` tokens from the caller's account to `recipient`.\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"a9059cbb"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2606</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"transfer"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2602</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2599</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"recipient"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2606</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"667:17:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2598</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"667:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2601</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2606</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"686:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2600</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"686:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"666:35:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2605</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2604</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2606</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"720:4:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2603</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bool"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"720:4:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"719:6:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"649:77:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2607</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"732:264:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Returns the remaining number of tokens that `spender` will be\n allowed to spend on behalf of `owner` through {transferFrom}. This is\n zero by default.\n This value changes when {approve} or {transferFrom} are called."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"dd62ed3e"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2616</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"allowance"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2612</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2609</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"owner"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2616</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1020:13:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2608</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1020:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2611</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2616</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1035:15:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2610</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1035:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1019:32:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2615</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2614</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2616</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1075:7:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2613</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1075:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1074:9:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1001:83:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2617</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1090:642:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\n Returns a boolean value indicating whether the operation succeeded.\n IMPORTANT: Beware that changing an allowance with this method brings the risk\n that someone may use both the old and the new allowance by unfortunate\n transaction ordering. One possible solution to mitigate this race\n condition is to first reduce the spender's allowance to 0 and set the\n desired value afterwards:\n https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n Emits an {Approval} event."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"095ea7b3"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2626</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"approve"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2622</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2619</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2626</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1754:15:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2618</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1754:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2621</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2626</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1771:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2620</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1771:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1753:33:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2625</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2624</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2626</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1805:4:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2623</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bool"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1805:4:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1804:6:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1737:74:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2627</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"1817:296:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Moves `amount` tokens from `sender` to `recipient` using the\n allowance mechanism. `amount` is then deducted from the caller's\n allowance.\n Returns a boolean value indicating whether the operation succeeded.\n Emits a {Transfer} event."</span>
+            },
+            <span class="hljs-attr">"functionSelector"</span>: <span class="hljs-string">"23b872dd"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2638</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"transferFrom"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2634</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2629</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"sender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2140:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2628</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2140:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2631</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"recipient"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2156:17:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2630</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2156:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2633</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"amount"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2175:14:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2632</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2175:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2139:51:9"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2637</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2636</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2638</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2209:4:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2635</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bool"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2209:4:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bool"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bool"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2208:6:9"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2657</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2118:97:9"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"external"</span>
+          },
+          {
+            <span class="hljs-attr">"anonymous"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2639</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2221:158:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Emitted when `value` tokens are moved from one account (`from`) to\n another (`to`).\n Note that `value` may be zero."</span>
+            },
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2647</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Transfer"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"EventDefinition"</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2646</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2641</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"from"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2647</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2399:20:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2640</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2399:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2643</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"to"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2647</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2421:18:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2642</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2421:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2645</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"value"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2647</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2441:13:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2644</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2441:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2398:57:9"</span>
+            },
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2384:72:9"</span>
+          },
+          {
+            <span class="hljs-attr">"anonymous"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">"documentation"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2648</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"StructuredDocumentation"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2462:148:9"</span>,
+              <span class="hljs-attr">"text"</span>: <span class="hljs-string">" @dev Emitted when the allowance of a `spender` for an `owner` is set by\n a call to {approve}. `value` is the new allowance."</span>
+            },
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">2656</span>,
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Approval"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"EventDefinition"</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">2655</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2650</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"owner"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2656</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2630:21:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2649</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2630:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2652</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">true</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"spender"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2656</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2653:23:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2651</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2653:7:9"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"nonpayable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                },
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">2654</span>,
+                  <span class="hljs-attr">"indexed"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"value"</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2656</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2678:13:9"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2653</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"uint256"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2678:7:9"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_uint256"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"uint256"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2629:63:9"</span>
+            },
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"2615:78:9"</span>
+          }
+        ],
+        <span class="hljs-attr">"scope"</span>: <span class="hljs-number">2658</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"129:2566:9"</span>
+      }
+    ],
+    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:2663:9"</span>
+  },
+  <span class="hljs-attr">"compiler"</span>: {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"solc"</span>,
+    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.6.12+commit.27d51765.Emscripten.clang"</span>
+  },
+  <span class="hljs-attr">"networks"</span>: {},
+  <span class="hljs-attr">"schemaVersion"</span>: <span class="hljs-string">"3.2.0"</span>,
+  <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2020-08-15T05:22:57.324Z"</span>,
+  <span class="hljs-attr">"devdoc"</span>: {
+    <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Interface of the ERC20 standard as defined in the EIP."</span>,
+    <span class="hljs-attr">"events"</span>: {
+      <span class="hljs-attr">"Approval(address,address,uint256)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."</span>
+      },
+      <span class="hljs-attr">"Transfer(address,address,uint256)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."</span>
+      }
+    },
+    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"dev"</span>,
+    <span class="hljs-attr">"methods"</span>: {
+      <span class="hljs-attr">"allowance(address,address)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Returns the remaining number of tokens that `spender` will be allowed to spend on behalf of `owner` through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called."</span>
+      },
+      <span class="hljs-attr">"approve(address,uint256)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Sets `amount` as the allowance of `spender` over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event."</span>
+      },
+      <span class="hljs-attr">"balanceOf(address)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Returns the amount of tokens owned by `account`."</span>
+      },
+      <span class="hljs-attr">"totalSupply()"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Returns the amount of tokens in existence."</span>
+      },
+      <span class="hljs-attr">"transfer(address,uint256)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Moves `amount` tokens from the caller's account to `recipient`. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."</span>
+      },
+      <span class="hljs-attr">"transferFrom(address,address,uint256)"</span>: {
+        <span class="hljs-attr">"details"</span>: <span class="hljs-string">"Moves `amount` tokens from `sender` to `recipient` using the allowance mechanism. `amount` is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event."</span>
+      }
+    },
+    <span class="hljs-attr">"version"</span>: <span class="hljs-number">1</span>
+  },
+  <span class="hljs-attr">"userdoc"</span>: {
+    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"user"</span>,
+    <span class="hljs-attr">"methods"</span>: {},
+    <span class="hljs-attr">"version"</span>: <span class="hljs-number">1</span>
+  }
+}
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

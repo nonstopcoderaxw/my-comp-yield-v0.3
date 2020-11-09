@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Context.json</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../doc-style.css" />
+  <script src="../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../";
+    var thisFile = "build/contracts/Context.json";
+    var defaultSidebar = true;
+  </script>
+  <script src="../../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>Context.json</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="json">{
+  <span class="hljs-attr">"contractName"</span>: <span class="hljs-string">"Context"</span>,
+  <span class="hljs-attr">"abi"</span>: [],
+  <span class="hljs-attr">"metadata"</span>: <span class="hljs-string">"{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@openzeppelin/contracts/GSN/Context.sol\":\"Context\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]}},\"version\":1}"</span>,
+  <span class="hljs-attr">"bytecode"</span>: <span class="hljs-string">"0x"</span>,
+  <span class="hljs-attr">"deployedBytecode"</span>: <span class="hljs-string">"0x"</span>,
+  <span class="hljs-attr">"immutableReferences"</span>: {},
+  <span class="hljs-attr">"sourceMap"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"deployedSourceMap"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"source"</span>: <span class="hljs-string">"// SPDX-License-Identifier: MIT\n\npragma solidity ^0.6.0;\n\n/*\n * @dev Provides information about the current execution context, including the\n * sender of the transaction and its data. While these are generally available\n * via msg.sender and msg.data, they should not be accessed in such a direct\n * manner, since when dealing with GSN meta-transactions the account sending and\n * paying for execution may not be the actual sender (as far as an application\n * is concerned).\n *\n * This contract is only required for intermediate, library-like contracts.\n */\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address payable) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view virtual returns (bytes memory) {\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\n        return msg.data;\n    }\n}\n"</span>,
+  <span class="hljs-attr">"sourcePath"</span>: <span class="hljs-string">"@openzeppelin/contracts/GSN/Context.sol"</span>,
+  <span class="hljs-attr">"ast"</span>: {
+    <span class="hljs-attr">"absolutePath"</span>: <span class="hljs-string">"@openzeppelin/contracts/GSN/Context.sol"</span>,
+    <span class="hljs-attr">"exportedSymbols"</span>: {
+      <span class="hljs-attr">"Context"</span>: [
+        <span class="hljs-number">1876</span>
+      ]
+    },
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1877</span>,
+    <span class="hljs-attr">"license"</span>: <span class="hljs-string">"MIT"</span>,
+    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"SourceUnit"</span>,
+    <span class="hljs-attr">"nodes"</span>: [
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1855</span>,
+        <span class="hljs-attr">"literals"</span>: [
+          <span class="hljs-string">"solidity"</span>,
+          <span class="hljs-string">"^"</span>,
+          <span class="hljs-string">"0.6"</span>,
+          <span class="hljs-string">".0"</span>
+        ],
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"PragmaDirective"</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:23:6"</span>
+      },
+      {
+        <span class="hljs-attr">"abstract"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"baseContracts"</span>: [],
+        <span class="hljs-attr">"contractDependencies"</span>: [],
+        <span class="hljs-attr">"contractKind"</span>: <span class="hljs-string">"contract"</span>,
+        <span class="hljs-attr">"documentation"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"fullyImplemented"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1876</span>,
+        <span class="hljs-attr">"linearizedBaseContracts"</span>: [
+          <span class="hljs-number">1876</span>
+        ],
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Context"</span>,
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ContractDefinition"</span>,
+        <span class="hljs-attr">"nodes"</span>: [
+          {
+            <span class="hljs-attr">"body"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1863</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Block"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"660:34:6"</span>,
+              <span class="hljs-attr">"statements"</span>: [
+                {
+                  <span class="hljs-attr">"expression"</span>: {
+                    <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"expression"</span>: {
+                      <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                      <span class="hljs-attr">"id"</span>: <span class="hljs-number">1860</span>,
+                      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"msg"</span>,
+                      <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Identifier"</span>,
+                      <span class="hljs-attr">"overloadedDeclarations"</span>: [],
+                      <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-number">-15</span>,
+                      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"677:3:6"</span>,
+                      <span class="hljs-attr">"typeDescriptions"</span>: {
+                        <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_magic_message"</span>,
+                        <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"msg"</span>
+                      }
+                    },
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1861</span>,
+                    <span class="hljs-attr">"isConstant"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isLValue"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isPure"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"lValueRequested"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"memberName"</span>: <span class="hljs-string">"sender"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"MemberAccess"</span>,
+                    <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"677:10:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address_payable"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address payable"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"functionReturnParameters"</span>: <span class="hljs-number">1859</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1862</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Return"</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"670:17:6"</span>
+                }
+              ]
+            },
+            <span class="hljs-attr">"documentation"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1864</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"_msgSender"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1856</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"609:2:6"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1859</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1858</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1864</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"643:15:6"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address_payable"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address payable"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1857</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"643:15:6"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"payable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address_payable"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address payable"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"642:17:6"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1876</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"590:104:6"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1874</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Block"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"765:165:6"</span>,
+              <span class="hljs-attr">"statements"</span>: [
+                {
+                  <span class="hljs-attr">"expression"</span>: {
+                    <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1869</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"this"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Identifier"</span>,
+                    <span class="hljs-attr">"overloadedDeclarations"</span>: [],
+                    <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-number">-28</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"775:4:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_contract$_Context_$1876"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"contract Context"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1870</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ExpressionStatement"</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"775:4:6"</span>
+                },
+                {
+                  <span class="hljs-attr">"expression"</span>: {
+                    <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"expression"</span>: {
+                      <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                      <span class="hljs-attr">"id"</span>: <span class="hljs-number">1871</span>,
+                      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"msg"</span>,
+                      <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Identifier"</span>,
+                      <span class="hljs-attr">"overloadedDeclarations"</span>: [],
+                      <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-number">-15</span>,
+                      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"915:3:6"</span>,
+                      <span class="hljs-attr">"typeDescriptions"</span>: {
+                        <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_magic_message"</span>,
+                        <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"msg"</span>
+                      }
+                    },
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1872</span>,
+                    <span class="hljs-attr">"isConstant"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isLValue"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isPure"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"lValueRequested"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"memberName"</span>: <span class="hljs-string">"data"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"MemberAccess"</span>,
+                    <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"915:8:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bytes_calldata_ptr"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bytes calldata"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"functionReturnParameters"</span>: <span class="hljs-number">1868</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1873</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Return"</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"908:15:6"</span>
+                }
+              ]
+            },
+            <span class="hljs-attr">"documentation"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1875</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"_msgData"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1865</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"717:2:6"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1868</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1867</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1875</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"751:12:6"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"memory"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bytes_memory_ptr"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bytes"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1866</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bytes"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"751:5:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bytes_storage_ptr"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bytes"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"750:14:6"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1876</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"700:230:6"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+          }
+        ],
+        <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1877</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"558:374:6"</span>
+      }
+    ],
+    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:900:6"</span>
+  },
+  <span class="hljs-attr">"legacyAST"</span>: {
+    <span class="hljs-attr">"absolutePath"</span>: <span class="hljs-string">"@openzeppelin/contracts/GSN/Context.sol"</span>,
+    <span class="hljs-attr">"exportedSymbols"</span>: {
+      <span class="hljs-attr">"Context"</span>: [
+        <span class="hljs-number">1876</span>
+      ]
+    },
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1877</span>,
+    <span class="hljs-attr">"license"</span>: <span class="hljs-string">"MIT"</span>,
+    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"SourceUnit"</span>,
+    <span class="hljs-attr">"nodes"</span>: [
+      {
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1855</span>,
+        <span class="hljs-attr">"literals"</span>: [
+          <span class="hljs-string">"solidity"</span>,
+          <span class="hljs-string">"^"</span>,
+          <span class="hljs-string">"0.6"</span>,
+          <span class="hljs-string">".0"</span>
+        ],
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"PragmaDirective"</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:23:6"</span>
+      },
+      {
+        <span class="hljs-attr">"abstract"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"baseContracts"</span>: [],
+        <span class="hljs-attr">"contractDependencies"</span>: [],
+        <span class="hljs-attr">"contractKind"</span>: <span class="hljs-string">"contract"</span>,
+        <span class="hljs-attr">"documentation"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-attr">"fullyImplemented"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"id"</span>: <span class="hljs-number">1876</span>,
+        <span class="hljs-attr">"linearizedBaseContracts"</span>: [
+          <span class="hljs-number">1876</span>
+        ],
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Context"</span>,
+        <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ContractDefinition"</span>,
+        <span class="hljs-attr">"nodes"</span>: [
+          {
+            <span class="hljs-attr">"body"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1863</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Block"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"660:34:6"</span>,
+              <span class="hljs-attr">"statements"</span>: [
+                {
+                  <span class="hljs-attr">"expression"</span>: {
+                    <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"expression"</span>: {
+                      <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                      <span class="hljs-attr">"id"</span>: <span class="hljs-number">1860</span>,
+                      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"msg"</span>,
+                      <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Identifier"</span>,
+                      <span class="hljs-attr">"overloadedDeclarations"</span>: [],
+                      <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-number">-15</span>,
+                      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"677:3:6"</span>,
+                      <span class="hljs-attr">"typeDescriptions"</span>: {
+                        <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_magic_message"</span>,
+                        <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"msg"</span>
+                      }
+                    },
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1861</span>,
+                    <span class="hljs-attr">"isConstant"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isLValue"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isPure"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"lValueRequested"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"memberName"</span>: <span class="hljs-string">"sender"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"MemberAccess"</span>,
+                    <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"677:10:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address_payable"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address payable"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"functionReturnParameters"</span>: <span class="hljs-number">1859</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1862</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Return"</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"670:17:6"</span>
+                }
+              ]
+            },
+            <span class="hljs-attr">"documentation"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1864</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"_msgSender"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1856</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"609:2:6"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1859</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1858</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1864</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"643:15:6"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"default"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address_payable"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address payable"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1857</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"address"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"643:15:6"</span>,
+                    <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"payable"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_address_payable"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"address payable"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"642:17:6"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1876</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"590:104:6"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+          },
+          {
+            <span class="hljs-attr">"body"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1874</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Block"</span>,
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"765:165:6"</span>,
+              <span class="hljs-attr">"statements"</span>: [
+                {
+                  <span class="hljs-attr">"expression"</span>: {
+                    <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1869</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"this"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Identifier"</span>,
+                    <span class="hljs-attr">"overloadedDeclarations"</span>: [],
+                    <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-number">-28</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"775:4:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_contract$_Context_$1876"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"contract Context"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1870</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ExpressionStatement"</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"775:4:6"</span>
+                },
+                {
+                  <span class="hljs-attr">"expression"</span>: {
+                    <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"expression"</span>: {
+                      <span class="hljs-attr">"argumentTypes"</span>: <span class="hljs-literal">null</span>,
+                      <span class="hljs-attr">"id"</span>: <span class="hljs-number">1871</span>,
+                      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"msg"</span>,
+                      <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Identifier"</span>,
+                      <span class="hljs-attr">"overloadedDeclarations"</span>: [],
+                      <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-number">-15</span>,
+                      <span class="hljs-attr">"src"</span>: <span class="hljs-string">"915:3:6"</span>,
+                      <span class="hljs-attr">"typeDescriptions"</span>: {
+                        <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_magic_message"</span>,
+                        <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"msg"</span>
+                      }
+                    },
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1872</span>,
+                    <span class="hljs-attr">"isConstant"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isLValue"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"isPure"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"lValueRequested"</span>: <span class="hljs-literal">false</span>,
+                    <span class="hljs-attr">"memberName"</span>: <span class="hljs-string">"data"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"MemberAccess"</span>,
+                    <span class="hljs-attr">"referencedDeclaration"</span>: <span class="hljs-literal">null</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"915:8:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bytes_calldata_ptr"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bytes calldata"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"functionReturnParameters"</span>: <span class="hljs-number">1868</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1873</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"Return"</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"908:15:6"</span>
+                }
+              ]
+            },
+            <span class="hljs-attr">"documentation"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-number">1875</span>,
+            <span class="hljs-attr">"implemented"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"function"</span>,
+            <span class="hljs-attr">"modifiers"</span>: [],
+            <span class="hljs-attr">"name"</span>: <span class="hljs-string">"_msgData"</span>,
+            <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"FunctionDefinition"</span>,
+            <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-attr">"parameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1865</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"717:2:6"</span>
+            },
+            <span class="hljs-attr">"returnParameters"</span>: {
+              <span class="hljs-attr">"id"</span>: <span class="hljs-number">1868</span>,
+              <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ParameterList"</span>,
+              <span class="hljs-attr">"parameters"</span>: [
+                {
+                  <span class="hljs-attr">"constant"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"id"</span>: <span class="hljs-number">1867</span>,
+                  <span class="hljs-attr">"mutability"</span>: <span class="hljs-string">"mutable"</span>,
+                  <span class="hljs-attr">"name"</span>: <span class="hljs-string">""</span>,
+                  <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"VariableDeclaration"</span>,
+                  <span class="hljs-attr">"overrides"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1875</span>,
+                  <span class="hljs-attr">"src"</span>: <span class="hljs-string">"751:12:6"</span>,
+                  <span class="hljs-attr">"stateVariable"</span>: <span class="hljs-literal">false</span>,
+                  <span class="hljs-attr">"storageLocation"</span>: <span class="hljs-string">"memory"</span>,
+                  <span class="hljs-attr">"typeDescriptions"</span>: {
+                    <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bytes_memory_ptr"</span>,
+                    <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bytes"</span>
+                  },
+                  <span class="hljs-attr">"typeName"</span>: {
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1866</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"bytes"</span>,
+                    <span class="hljs-attr">"nodeType"</span>: <span class="hljs-string">"ElementaryTypeName"</span>,
+                    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"751:5:6"</span>,
+                    <span class="hljs-attr">"typeDescriptions"</span>: {
+                      <span class="hljs-attr">"typeIdentifier"</span>: <span class="hljs-string">"t_bytes_storage_ptr"</span>,
+                      <span class="hljs-attr">"typeString"</span>: <span class="hljs-string">"bytes"</span>
+                    }
+                  },
+                  <span class="hljs-attr">"value"</span>: <span class="hljs-literal">null</span>,
+                  <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+                }
+              ],
+              <span class="hljs-attr">"src"</span>: <span class="hljs-string">"750:14:6"</span>
+            },
+            <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1876</span>,
+            <span class="hljs-attr">"src"</span>: <span class="hljs-string">"700:230:6"</span>,
+            <span class="hljs-attr">"stateMutability"</span>: <span class="hljs-string">"view"</span>,
+            <span class="hljs-attr">"virtual"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">"visibility"</span>: <span class="hljs-string">"internal"</span>
+          }
+        ],
+        <span class="hljs-attr">"scope"</span>: <span class="hljs-number">1877</span>,
+        <span class="hljs-attr">"src"</span>: <span class="hljs-string">"558:374:6"</span>
+      }
+    ],
+    <span class="hljs-attr">"src"</span>: <span class="hljs-string">"33:900:6"</span>
+  },
+  <span class="hljs-attr">"compiler"</span>: {
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"solc"</span>,
+    <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.6.12+commit.27d51765.Emscripten.clang"</span>
+  },
+  <span class="hljs-attr">"networks"</span>: {},
+  <span class="hljs-attr">"schemaVersion"</span>: <span class="hljs-string">"3.2.0"</span>,
+  <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2020-08-15T05:22:57.318Z"</span>,
+  <span class="hljs-attr">"devdoc"</span>: {
+    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"dev"</span>,
+    <span class="hljs-attr">"methods"</span>: {},
+    <span class="hljs-attr">"version"</span>: <span class="hljs-number">1</span>
+  },
+  <span class="hljs-attr">"userdoc"</span>: {
+    <span class="hljs-attr">"kind"</span>: <span class="hljs-string">"user"</span>,
+    <span class="hljs-attr">"methods"</span>: {},
+    <span class="hljs-attr">"version"</span>: <span class="hljs-number">1</span>
+  }
+}
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>
