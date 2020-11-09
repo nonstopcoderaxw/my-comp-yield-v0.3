@@ -1,0 +1,354 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "error",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "info",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "detail",
+						"type": "uint256"
+					}
+				],
+				"name": "Failure",
+				"type": "event"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "contract CompFarmingSummaryProxy",
+						"name": "proxy",
+						"type": "address"
+					}
+				],
+				"name": "_become",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "compFarmingSummaryImplmentation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "compProfile",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "balance",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "yetToClaimed",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct CompFarmingSummaryInterface.CompProfile",
+						"name": "_compProfile",
+						"type": "tuple"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "a",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "b",
+						"type": "string"
+					}
+				],
+				"name": "compareStrings",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getPriceCOMP",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "priceInUSD",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "cTokenAddress",
+						"type": "address"
+					}
+				],
+				"name": "getPriceInUSD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "priceInUSD",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "pendingAdmin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "pendingCompFarmingSummaryImplmentation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "sortedCompDistSpeedAllMarkets",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "sortedCTokenNameList",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "sortedCompSpeedList",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_account",
+						"type": "address"
+					}
+				],
+				"name": "totalCompIncomePerYear",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "errCode",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalCompIncomeMantissa",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/CompFarmingSummaryV1.sol": "CompFarmingSummaryV1"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/CompFarmingSummaryInterface.sol": {
+			"keccak256": "0x244dca035c9e91e50467695e643e69a01f8e7b6496fe7a7f36260db9e4a513aa",
+			"urls": [
+				"bzz-raw://a32f4887df3ef97168a55774e9f5be47c63469ce08ff62d3a61c88c4fd5bdb89",
+				"dweb:/ipfs/QmXS6c2Ac1mXH5NoacVN72UNHYCKLoXEXpkFeCar86Wwx5"
+			]
+		},
+		"localhost/CompFarmingSummaryProxy.sol": {
+			"keccak256": "0xdb3632ec2dddd8ed9238c2a244268f7a5b2e259e2fcc38166bf2cbb490640db7",
+			"urls": [
+				"bzz-raw://817a8bfee7e2adbebc0ca59f000f876c3cf51ba8f2b87b9fd3eb6a408565ceb8",
+				"dweb:/ipfs/QmSbKH16jJAnuXunQQNpfnqKG5GqY3CXftkb5gNR4y9Wsc"
+			]
+		},
+		"localhost/CompFarmingSummaryProxyStorage.sol": {
+			"keccak256": "0x9defb9aae2ee3a22e650ed26ed03a6366555252431e39e1ef7108bdb49cebdcd",
+			"urls": [
+				"bzz-raw://ac9e61ef76351bb7ec80fd7ac88c0c45a158f011b86d639eaf6b489e88d5efff",
+				"dweb:/ipfs/QmXkVPnsL5mMGovNWnttSh4uqV43Qdv7ih3DS4my6YeewW"
+			]
+		},
+		"localhost/CompFarmingSummaryV1.sol": {
+			"keccak256": "0xfe0e51d1c12c2af38b93c898906ab12c4ffe150f9c783ef7a6927ed9d2130dc2",
+			"urls": [
+				"bzz-raw://d01903b38d8b17862d16938de20e1b77dd289b7cf89beafc6d7964f7e9dd0d9c",
+				"dweb:/ipfs/QmXSn5e2qVKYvgtNsESaU1d42oAivUmq4QFyJhsCaTMKNJ"
+			]
+		},
+		"localhost/CompoundInterfaces.sol": {
+			"keccak256": "0xcb7e1238d5efbdf231a2c138746a28a2610a486e0ab97540d5c0c258d9a4e005",
+			"urls": [
+				"bzz-raw://2d21374b738b80c9d392281e9bcdc4a8a3b729f560c98a5c8493e44c33374829",
+				"dweb:/ipfs/QmSDzwE9UupJdnhh2PNTzJmWTUMLBJsDWdoHMsZZcQHBKS"
+			]
+		},
+		"localhost/math/CarefulMath.sol": {
+			"keccak256": "0x4c9400a586e71fc425a04de742a2bd4e0454518cd49657bac3042298f1ab37b2",
+			"urls": [
+				"bzz-raw://97ead36f9790872a0f5490868dc0eaabc976a48e0861beef8561c075efac8add",
+				"dweb:/ipfs/QmVoTKkeX1V5DSBPTfXzgmmLtqoHeDqinudzRAuZRFdmbX"
+			]
+		},
+		"localhost/math/Exponential.sol": {
+			"keccak256": "0xc0ad06f2aa973964c26c73e1a5a04dd47b53a994d289bbb7c555ba6a16eb8642",
+			"urls": [
+				"bzz-raw://76928e4911253efbf2dc9ccd96d25190c67c0f5cd50d9c7f2735eb6e1576c736",
+				"dweb:/ipfs/QmRmppQw6d4szXQ2toTAgSBw2jDiwk5uBE1nTdi3qeNugq"
+			]
+		},
+		"localhost/utility/ErrorReporter.sol": {
+			"keccak256": "0xf1cb180e7ddc407319432727ac11d66752fd1bdbb22e553eec64744b4db54578",
+			"urls": [
+				"bzz-raw://7e7c5c901c61d5fe1621bf82438ae26c93be38fe6a21e41151b4ec11d9e9c205",
+				"dweb:/ipfs/Qma1pf2jECnBiaZ3BFiLJxLrqcjCVMp4cRJ7bvV8hHpfUN"
+			]
+		}
+	},
+	"version": 1
+}
