@@ -1,6 +1,5 @@
 evn.json
 truffle-config.js
-execjs/
 mergedContracts/
 ArchivedContracts/
 build/
