@@ -138,9 +138,8 @@ contract CompFarmingSummaryV2 is CompFarmingSummaryStorageV1, CompFarmingSummary
     }
 
 
-
     //note: add view
-    function compIncomeByCToken(address _account, address cTokenAddress, uint numberOfBlocks) internal view returns(Error, Exp memory){
+    function compIncomeByCToken(address _account, address cTokenAddress, uint numberOfBlocks) public view returns(Error, Exp memory){
 
 
         CompIncomeLocalVars memory v;
@@ -169,10 +168,9 @@ contract CompFarmingSummaryV2 is CompFarmingSummaryStorageV1, CompFarmingSummary
 
         //totalBorrowWithInterest
         v.totalBorrow = getTotalBorrow(cTokenAddress);
-
         //supplyPercentageMantissa
-        v.supplyPercentageExp = div_(mul_(v.underlyingTokenBalanceExp, expScale), v.totalSupply);
-        v.borrowPercentageExp = div_(mul_(v.loanBalanceExp, expScale), v.totalBorrow);
+        v.supplyPercentageExp = div_(v.underlyingTokenBalanceExp, div_(v.totalSupply, 10**v.underlyingDecimals));
+        v.borrowPercentageExp = div_(v.loanBalanceExp, div_(v.totalBorrow, 10**v.underlyingDecimals));
 
         v.compReleasedExp = mul_(v.compIncomePerBlockExp, numberOfBlocks);
 
@@ -181,6 +179,63 @@ contract CompFarmingSummaryV2 is CompFarmingSummaryStorageV1, CompFarmingSummary
         v.compIncomeOnBorrowExp = mul_(v.compReleasedExp, v.borrowPercentageExp);
 
         v.compIncomeExp = add_(v.compIncomeOnSupplyExp, v.compIncomeOnBorrowExp);
+
+        return (Error.NO_ERROR, v.compIncomeExp);
+    }
+
+    event showVar(string, uint);
+    //TestFunction
+    function TestCompIncomeByCToken(address _account, address cTokenAddress, uint numberOfBlocks) public returns(Error, Exp memory){
+
+
+        CompIncomeLocalVars memory v;
+
+        //get cToken Decimals
+        v.cTokenDecimals = ERC20(cTokenAddress).decimals();
+        v.underlyingDecimals = underlyingDecimals(cTokenAddress);
+
+
+        //get comp token distrubtion speed
+        v.compIncomePerBlockExp = compDistSpeed(cTokenAddress);
+        //continue to refractor here
+
+        //get account snapshot
+        (v.getAccountSnapshotErrCode, v.cTokenBalanceMantissa18, v.borrowBalanceMantissa18, v.exchangeRateMantissa18) = getAccountSnapshot(_account, cTokenAddress);
+        if(v.getAccountSnapshotErrCode != 0){
+            return (Error.ACCOUNT_SNAPSHOT_ERROR, Exp({mantissa: 0}));
+        }
+        //underlyingTokenBalance
+        v.underlyingTokenBalanceExp = mul_(Exp({mantissa: v.cTokenBalanceMantissa18}), Exp({mantissa: v.exchangeRateMantissa18}));
+
+        //loanBalanceExp
+        v.loanBalanceExp = Exp({mantissa: v.borrowBalanceMantissa18});
+
+        //totalSupplyWithInterest
+        v.totalSupply = getTotalSupply(cTokenAddress);
+
+        //totalBorrowWithInterest
+        v.totalBorrow = getTotalBorrow(cTokenAddress);
+        //supplyPercentageMantissa
+        v.supplyPercentageExp = div_(v.underlyingTokenBalanceExp, div_(v.totalSupply, 10**v.underlyingDecimals));
+        v.borrowPercentageExp = div_(v.loanBalanceExp, div_(v.totalBorrow, 10**v.underlyingDecimals));
+
+        v.compReleasedExp = mul_(v.compIncomePerBlockExp, numberOfBlocks);
+
+        v.compIncomeOnSupplyExp = mul_(v.compReleasedExp, v.supplyPercentageExp);
+
+        v.compIncomeOnBorrowExp = mul_(v.compReleasedExp, v.borrowPercentageExp);
+
+        v.compIncomeExp = add_(v.compIncomeOnSupplyExp, v.compIncomeOnBorrowExp);
+
+        emit showVar("compIncomePerBlockExp", v.compIncomePerBlockExp.mantissa);
+        emit showVar("compIncomeOnSupplyExp", v.supplyPercentageExp.mantissa);
+        emit showVar("compIncomeOnBorrowExp", v.borrowPercentageExp.mantissa);
+        emit showVar("underlyingTokenBalanceExp", v.underlyingTokenBalanceExp.mantissa);
+        emit showVar("compReleasedExp", v.compReleasedExp.mantissa);
+        emit showVar("totalSupply", v.totalSupply);
+        emit showVar("compIncomeExp", v.compIncomeExp.mantissa);
+
+
 
 
         return (Error.NO_ERROR, v.compIncomeExp);
@@ -345,7 +400,7 @@ contract CompFarmingSummaryV2 is CompFarmingSummaryStorageV1, CompFarmingSummary
 
     }
 
-    function estimatedNumberOfBlocksPerYear() internal pure returns (uint256 numberOfBlocksPerYearMantissa){
+    function estimatedNumberOfBlocksPerYear() public pure returns (uint256 numberOfBlocksPerYearMantissa){
         uint256 numberOfBlockPerSec = 14;
         uint256 secsPerYear = 31536000;
 

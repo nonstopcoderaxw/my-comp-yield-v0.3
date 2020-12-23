@@ -8,7 +8,7 @@ module.exports = function(deployer) {
     estimatedGas();
     deployer.deploy(CompFarmingSummaryV1);
     deployer.deploy(CompFarmingSummaryProxy);
-    //deployer.deploy(CompFarmingSummaryV2);
+    deployer.deploy(CompFarmingSummaryV2);
 
 }
 
