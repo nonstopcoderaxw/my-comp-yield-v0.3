@@ -3,13 +3,12 @@ pragma experimental ABIEncoderV2;
 
 import "./CompoundInterfaces.sol";
 import "./math/Exponential.sol";
-import "./utility/Logging.sol";
 import "./utility/ErrorReporter.sol";
 import "./CompFarmingSummaryInterface.sol";
 import "./CompFarmingSummaryProxyStorage.sol";
 import "./CompFarmingSummaryProxy.sol";
 
-contract CompFarmingSummaryV2 is CompFarmingSummaryStorageV1, CompFarmingSummaryInterface, Exponential, Logging, CompFarmingSummaryErrorReporter{
+contract CompFarmingSummaryV2 is CompFarmingSummaryStorageV1, CompFarmingSummaryInterface, Exponential, CompFarmingSummaryErrorReporter{
 
 
     struct CompIncomeLocalVars{
