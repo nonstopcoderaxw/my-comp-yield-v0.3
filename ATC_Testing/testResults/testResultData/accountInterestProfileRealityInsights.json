@@ -1,0 +1,71 @@
+{
+    "supplyInterests": [
+        {
+            "cTokenAddr": "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
+            "interestRateMantissa": "16337820220",
+            "balance": "46112015665937888039643",
+            "underlyingSymbol_": "DAI",
+            "interestInUSD_": "1776944837693678646967"
+        },
+        {
+            "cTokenAddr": "0x39AA39c021dfbaE8faC545936693aC917d5E7563",
+            "interestRateMantissa": "28917218670",
+            "balance": "46112055246",
+            "underlyingSymbol_": "USDC",
+            "interestInUSD_": "3143126814648031318576"
+        },
+        {
+            "cTokenAddr": "0xf650C3d88D12dB855b8bf7D11Be6C55A4e07dCC9",
+            "interestRateMantissa": "26965704029",
+            "balance": "20000004315",
+            "underlyingSymbol_": "USDT",
+            "interestInUSD_": "1271255245594018662453"
+        },
+        {
+            "cTokenAddr": "0xccF4429DB6322D5C611ee964527D42E5d685DD6a",
+            "interestRateMantissa": "1425728053",
+            "balance": "401000019",
+            "underlyingSymbol_": "WBTC",
+            "interestInUSD_": "608409226979429981011"
+        },
+        {
+            "cTokenAddr": "0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E",
+            "interestRateMantissa": "2954859157",
+            "balance": "4008250478424442231258",
+            "underlyingSymbol_": "BAT",
+            "interestInUSD_": "31286319530373054247"
+        }
+    ],
+    "borrowInterests": [
+        {
+            "cTokenAddr": "0x6C8c6b02E7b2BE14d4fA6022Dfd6d75921D90E4E",
+            "interestRateMantissa": "28648930203",
+            "balance": "2008250628774044374672",
+            "underlyingSymbol_": "BAT",
+            "interestInUSD_": "151980951536136186786"
+        },
+        {
+            "cTokenAddr": "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
+            "interestRateMantissa": "23755329911",
+            "balance": "26112006440215550292655",
+            "underlyingSymbol_": "DAI",
+            "interestInUSD_": "1463076507660486477104"
+        },
+        {
+            "cTokenAddr": "0x39AA39c021dfbaE8faC545936693aC917d5E7563",
+            "interestRateMantissa": "37418065566",
+            "balance": "26112030143",
+            "underlyingSymbol_": "USDC",
+            "interestInUSD_": "2303100423560711397146"
+        },
+        {
+            "cTokenAddr": "0xccF4429DB6322D5C611ee964527D42E5d685DD6a",
+            "interestRateMantissa": "19363033838",
+            "balance": "201000041",
+            "underlyingSymbol_": "WBTC",
+            "interestInUSD_": "4141753558689111806273"
+        }
+    ],
+    "totalInterestInUSD_": "1228888997000914204055",
+    "isPositiveInterest_": false
+}
