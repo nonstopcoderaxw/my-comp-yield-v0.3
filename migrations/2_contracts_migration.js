@@ -1,19 +1,15 @@
 const network = "private_mainnet";
-//const compFarmingSummary = artifacts.require("./CompFarmingSummary.sol");
-const CompFarmingSummaryProxy = artifacts.require("./CompFarmingSummaryProxy.sol");
-const CompFarmingSummaryV1 = artifacts.require("./CompFarmingSummaryV1.sol");
-const CompFarmingSummaryV2 = artifacts.require("./CompFarmingSummaryV2.sol");
+
+const CompFarmingSummaryV3 = artifacts.require("./V3/CompFarmingSummaryV3.sol");
+const TestMyCompFarmingPrediction = artifacts.require("./V3/TestMyCompFarmingPrediction.sol");
+
 
 module.exports = function(deployer) {
     estimatedGas();
-    deployer.deploy(CompFarmingSummaryV1);
-    deployer.deploy(CompFarmingSummaryProxy);
-    deployer.deploy(CompFarmingSummaryV2);
-
+    deployer.deploy(CompFarmingSummaryV3);
+    deployer.deploy(TestMyCompFarmingPrediction);
 }
 
 async function estimatedGas(){
-  console.log("estimated gas to deploy CompFarmingSummaryV1: ", await CompFarmingSummaryV1.new.estimateGas());
-  console.log("estimated gas to deploy CompFarmingSummaryProxy: ", await CompFarmingSummaryProxy.new.estimateGas());
-
+  console.log("estimated gas to deploy CompFarmingSummaryV3: ", await CompFarmingSummaryV3.new.estimateGas());
 }
