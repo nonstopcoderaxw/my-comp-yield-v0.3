@@ -6,4 +6,4 @@ build/
 doc/
 node_modules/
 ATC_Testing/testData/
-ATC_Testing/testResult/
+ATC_Testing/testResults/
