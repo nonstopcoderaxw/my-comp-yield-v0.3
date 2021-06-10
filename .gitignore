@@ -5,5 +5,5 @@ ArchivedContracts/
 build/
 doc/
 node_modules/
-ACT_Testing/testData/
-ACT_Testing/testResult/
+ATC_Testing/testData/
+ATC_Testing/testResult/
