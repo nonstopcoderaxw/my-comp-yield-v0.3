@@ -3,5 +3,5 @@ A dashbord of reports to show the COMP token farming status, liquidation risk ra
 
 ![alt text](https://raw.githubusercontent.com/AlexTheCodeMan/myCompFarmingSummary/main/screenshots/screenshot1.png)
 
-
-
+**Hosted UI**
+http://143.198.192.218/
