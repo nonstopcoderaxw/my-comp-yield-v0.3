@@ -13,11 +13,6 @@ async function mergeSol(savingTo, contractLocation){
   })
 }
 
-var contractLocation = "./contracts/CompFarmingSummaryProxy.sol";
-var savingTo = "./mergedContracts/Merged_CompFarmingProxy.sol";
-//mergeSol(savingTo, contractLocation);
-
-
-module.exports = function(callback) {
-    mergeSol(savingTo, contractLocation);
-}
+var contractLocation = "./contracts/V3/CompFarmingSummaryV3.sol";
+var savingTo = "./mergedContracts/Merged_CompFarmingSummaryV3.sol";
+mergeSol(savingTo, contractLocation);

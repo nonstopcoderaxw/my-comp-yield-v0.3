@@ -6,7 +6,7 @@ import "../../../cLibs/contracts/0.5.0/utils/ArrayUtil.sol";
 
 import "../../../cLibs/contracts/0.5.0/utils/Logging.sol";
 
-contract CompFarmingSummaryV3Model is CompoundMethods, ArrayUtil, Logging{
+contract CompFarmingSummaryV3Model is CompoundMethods, ArrayUtil{
     uint256 constant public MAX_INT_NUMBER = 115792089237316195423570985008687907853269984665640564039457584007913129639935;
 
     enum LiquidationRiskRanking{
