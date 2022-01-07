@@ -9,5 +9,7 @@ A dashbord of reports to show the COMP token farming status, liquidation risk ra
 
 ![alt text](https://raw.githubusercontent.com/AlexTheCodeMan/myCompFarmingSummary/main/screenshots/screenshot1.png)
 
+Mainnet Contract: https://etherscan.io/address/0xc1b7f22d0bc15edfed4fccde5dcdd3ceefa9717a
+
 
 
