@@ -1,5 +1,5 @@
 # My Comp Yield v0.3
-### Deprecated for Compound governance proposals #62. 
+### Deprecated for Compound Governance Proposal #62. 
 ### Please see this version below after #62 update
 https://github.com/nonstopcoderaxw/myCompYield_v0.4
 
